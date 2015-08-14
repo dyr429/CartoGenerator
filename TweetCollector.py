@@ -37,9 +37,9 @@ class StdOutListener(tweepy.StreamListener):
         print(status)
 
 if __name__ == '__main__':
-    l = StdOutListener()
-    auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-    auth.set_access_token(access_token, access_secret)
+   # l = StdOutListener()
+    #auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+    #auth.set_access_token(access_token, access_secret)
 
     stream = tweepy.Stream(auth, l)
     stream.filter(locations=[-180,-90,180,90], track=['basketball'])
